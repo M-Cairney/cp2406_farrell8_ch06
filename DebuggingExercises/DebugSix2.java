@@ -5,17 +5,20 @@ public class DebugSix2
 {
    public static void main(String args[])
    {
-      char letter;
+      String letter = "a";
       int a;
       final int MIN = 65;
       final int MAX = 122;
       final int STOPLINE1 = 85;
-      final int STOPLINE2 = 122;
-      for(a = MIN; a <= MAX; a++)
-        letter = (char)a;
-        System.out.print("  " + letter);
-        if((a == STOPLINE1) & (a == STOPLINE2))
-          System.out.println();
-      System.out.println("\nEnd of application")
+       final int STOPLINE2 = 105;
+
+
+      for(a = MIN; a <= MAX; ++a) {
+          letter = Character.toString((char) a);
+          System.out.print("  " + letter);
+          if ((a == STOPLINE1) || (a == STOPLINE2))
+              System.out.println();
+      }
+      System.out.println("\nEnd of application");
     }
 }
